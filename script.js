@@ -60,6 +60,8 @@ menu.addEventListener('click', () => {
 // JOIN BUTTON
 let joinBtn = document.querySelector('#join')
 let modal = document.querySelector('.modal-container')
+
+
 modal.style.display == "none"
 joinBtn.addEventListener('click', () => {
   if(modal.style.display == "none") {
@@ -75,6 +77,7 @@ let cancBut = document.querySelector('#cancModal')
 let passVal = document.querySelector('#passVal')
 let passText;
 let errText = document.querySelector('#errText')
+let logNot = document.querySelector('.log-notification')
 
 enterBut.addEventListener('click', () => {
   passText = passVal.value
@@ -83,10 +86,16 @@ enterBut.addEventListener('click', () => {
       logItems[i].style.display = 'block'
     }
     modal.style.display = "none"
+
+    logNot.style.display = 'block'
+    setTimeout(() => {
+      logNot.style.display = 'none'
+    }, 4000);
   } else {
     errText.innerHTML = "Wrong input! \n Enter a combination of at least six numbers and letters."
     errText.style.color = 'red'
   }
+
 })
 
 cancBut.addEventListener('click', () => {

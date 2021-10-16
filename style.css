@@ -699,6 +699,16 @@ footer .footer-section .footer-bottom .right-side ul a {
   top: 0;
 }
 
+.log-notification {
+  display: none;
+  background: #67eea6;
+  padding: 3px 25px;
+}
+
+.log-notification p {
+  color: #007938;
+}
+
 .modal-container {
   position: fixed;
   width: 100%;
